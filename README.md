@@ -44,7 +44,7 @@
 - Google IT Support Specialist
 
 ## Academic Projects
-### Self-Driving Vehicle Traversing a Dynamic Environment (GitHub)
+### Self-Driving Vehicle Traversing a Dynamic Environment (GitHub)[https://github.com/SPRajendran/Self-Driving-Vehicle-Traversing-a-Dynamic-Environment]
 - Used Vision Transformer for generating a trajectory for a vehicle moving along a dynamic environment.
 - Visualized by using Lyft's gym environment.
 - Dataset used is Lyft's Level5 planning dataset.
@@ -52,11 +52,11 @@
 ### Depth-Estimation using a Monocular Camera
 - Using a transformer-based architecture to divide the input RGB image into bins whose center value is adaptively estimated, and the depth image is obtained by a linear combination of the values.
 
-### Challenge of Urban Search and Rescue (US&R) for Autonomous Robots (GitHub)
+### Challenge of Urban Search and Rescue (US&R) for Autonomous Robots (GitHub)[https://github.com/SPRajendran/Challenge-of-Urban-Search-and-Rescue-for-Autonomous-Robots]
 - Simulated a system wherein a pair of robots are used for the purpose of search and rescue in urban environments.
 - The lead robot moves along the map to a list of positions at which an AR tag is used to signify the presence of a victim. The second robot receives the location of the victims and the order in which the rescue is to be carried out.
 
-### Trash Detection and Collection Robot in an unknown environment (GitHub)
+### Trash Detection and Collection Robot in an unknown environment (GitHub)[https://github.com/SPRajendran/Trash-Detection-and-Collection-Robot-in-an-]
 - Designed and simulated a robot capable of traversing an unknown environment.
 - The robot can detect any object using its cameras and deliver it to a pre-specified goal position.
 
@@ -64,7 +64,7 @@
 - Self-driving car being developed as a part of the Mahindra RISE Driverless Car Challenge competition.
 - Worked on computer vision for lane and traffic signal detection and LIDAR Interfacing.
 
-### Maze solver using Depth First Search Algorithm (GitHub)
+### Maze solver using Depth First Search Algorithm (GitHub)[https://github.com/shaileshpranav/MazeSolver-using-DFS]
 - A robot moves through a maze by making use of the Depth First Search Algorithm.
 - The micro mouse simulator is used for the purpose of generating a maze as well as for visualizing the robot in real time.
 

@@ -15,31 +15,18 @@
   Coimbatore, India
 
 ## Technical Skills
-### Programming Languages
-- C
-- C++
-- Python
-- C#
 
-### Packages
-- OpenCV
-- MySQL
-- Tkinter
+| Programming Languages | Packages | Software | Hardware |
+| --- | --- | --- | --- |
+| C | OpenCV | ROS | Arduino |
+| C++ | MySQL | ROS2 | Raspberry Pi |
+| Python | Tkinter | Unity |  Meta Quest 2 |
+| C# | | MATLAB | Android|
+| | | LabVIEW | Siemens PLC|
+| | | SolidWorks | |
+| | | AutoCAD | |
+| | | Android Studio | |
 
-### Software
-- ROS
-- ROS2
-- Unity
-- MATLAB
-- LabVIEW
-- SolidWorks
-- AutoCAD
-- Android Studio
-
-### Hardware
-- Arduino
-- Raspberry Pi
-- Siemens PLC
 
 ## Research Project
 ### New York University – Tandon School of Engineering – Mechatronics, Control and Robotics Lab

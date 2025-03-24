@@ -11,6 +11,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -24,8 +25,12 @@
 						
               
 						<h1>Shailesh Pranav Rajendran</h1>
-						<p>I am an enthusiastic engineer with a passion for Machine Learning and Artificial Intelligence. Find my CV <a href="https://github.com/shaileshpranav/shaileshpranav.github.io/blob/main/shailesh_rajendran_resume.pdf">here</a><br/>
+						<p>Results-driven Software Engineer specializing in Generative AI and machine learning with proven expertise in designing enterprise-grade solutions. Find my CV <a href="https://github.com/shaileshpranav/shaileshpranav.github.io/blob/main/shailesh_rajendran_resume.pdf">here</a><br/>
 						</p>
+						<div class="header-cta">
+							<a href="#intro" class="button primary" target="_self">Learn More</a>
+							<a href="#cta" class="button" target="_self">View Skills</a>
+						</div>
 					</header>
 
 				<!-- Nav -->
@@ -35,6 +40,7 @@
 							<li><a href="#first">Projects</a></li>
 							<li><a href="#second">Experience</a></li>
 							<li><a href="#cta">Skills</a></li>
+							<li><a href="#footer">Contact</a></li>
 						</ul>
 					</nav>
 
@@ -48,7 +54,7 @@
 										<header class="major">
 											<h2>Shailesh Pranav Rajendran</h2>
 										</header>
-										<p>Welcome to my personal website! Here, you can find updates about my career and projects. I am currently working as a Machine Learning Engineer at <a href="https://worldlink-us.com">Worldlink-US</a>. Prior to this, I graduated with a Master of Engineering degree in Robotics from <a href="https://umd.edu">University of Maryland</a>, College Park. As an enthusiastic engineer, I am passionate about Machine Learning, especially large language models for use in Retrieval Augmented Generation. Feel free to browse my website to learn more about my work and interests. </p>
+										<p>Welcome to my personal website! I am currently working as a Data/ML Engineer at <a href="https://worldlink-us.com">WorldLink-US</a>, where I focus on implementing real-time speech interaction systems and optimizing LLM inferencing. Prior to this, I graduated with a Master of Engineering degree in Robotics from <a href="https://umd.edu">University of Maryland</a>, College Park. As a software engineer specializing in Generative AI and machine learning, I am passionate about designing enterprise-grade solutions that optimize performance while ensuring data privacy and security. Feel free to browse my website to learn more about my work and interests.</p>
 										<!-- <ul class="actions">
 											<li><a href="generic.html" class="button">Learn More</a></li>
 										</ul> -->
@@ -205,55 +211,104 @@
 							<section id="second" class="main special">
 								<header class="major">
 									<h2>Experience</h2>
-									<!-- <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br /> -->
-									<!-- posuere. Nulla massa urna, fermentum eget quam aliquet.</p> -->
 								</header>
-								<!-- <ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-code-branch"></span>
-										<strong>5,120</strong> Etiam
-									</li>
-									<li class="style2">
-										<span class="icon fa-folder-open"></span>
-										<strong>8,192</strong> Magna
-									</li>
-									<li class="style3">
-										<span class="icon solid fa-signal"></span>
-										<strong>2,048</strong> Tempus
-									</li>
-									<li class="style4">
-										<span class="icon solid fa-laptop"></span>
-										<strong>4,096</strong> Aliquam
-									</li>
-									<li class="style5">
-										<span class="icon fa-gem"></span>
-										<strong>1,024</strong> Nullam
-									</li>
-								</ul> -->
-								<h3><a href="https://worldlink-us.com">Worldlink-US</a></h3>
-								<h4>Nov 2023 - Current</h4>
-								<div class="description">
-									<p>At WorldLink US, I contributed to developing a secure, on-premise chatbot emphasizing data protection and user privacy in compliance with organizational and regulatory standards. 
-									Leveraging Gen AI technology, I designed and implemented a sophisticated data pipeline integrating vector and knowledge graph databases, enhancing the chatbot's Retrieval-Augmented Generation (RAG) capabilities for significantly improved response accuracy and quality.
-								</p>
-							</div>
-									<h3>NEW YORK UNIVERSITY TANDON SCHOOL OF ENGINEERING: MECHATRONICS, CONTROL AND ROBOTICS LAB </h3>
-									<h4>FEB 2020 - MAY 2020</h4>
-									<div class="description"><p>Designed and fabricated a rehabilitation device that addresses the unique needs of stroke patients with partial loss of maneuverability in their arms. We 3D printed the device's structure and integrated a powerful Dynamixel servo motor, which is controlled using a Raspberry Pi. 
-										The result is a highly effective and customizable rehabilitation tool that can help patients regain mobility and improve their quality of life.
+
+								<div class="experience-item">
+									<h3><a href="https://worldlink-us.com">WorldLink-US</a></h3>
+									<h4>Data/ML Engineer | Nov 2023 - Present</h4>
+									<p class="technologies">
+										<span>MeloTTS/AzureTTS</span>
+										<span>Whisper</span>
+										<span>TensorRT</span>
+										<span>FastAPI</span>
+										<span>Docker</span>
+										<span>Kubernetes</span>
 									</p>
-								</div>
-									<h3>L.G. BALAKRISHNAN & BROS LTD</h3>
-									<h4>DEC 2017 - APR 2018</h4>
 									<div class="description">
-									<p>Developed and deployed a custom data logging system to accurately track and analyze production output of individual machines.
-						Leveraged expertise in cloud computing to design and implement a cloud-based database, streamlining inventory management and facilitating real-time production planning</p>
+										<p>As a Data/ML Engineer at WorldLink US, I focus on implementing real-time speech interaction systems and optimizing LLM inferencing. <br> Key achievements include:</p>
+										<ul>
+											<li>Implemented real-time speech-to-text and text-to-speech capabilities using open-source models (MeloTTS, Whisper)</li>
+											<li>Developed a multimodal chatbot for RAG application with audio, video and text modalities</li>
+											<li>Optimized LLM inferencing using TensorRT, reducing inference latency and increasing throughput</li>
+											<li>Containerized the chatbot application using Docker & Kubernetes for seamless deployment and scalability</li>
+										</ul>
 									</div>
-								<!-- <footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer> -->
+								</div>
+
+								<div class="experience-item">
+									<h3>Unleashed Brands - Phase I (Contract)</h3>
+									<h4>Software Engineer | 2023</h4>
+									<p class="technologies">
+										<span>FastAPI</span>
+										<span>PostgreSQL</span>
+										<span>Redis</span>
+										<span>Milvus</span>
+										<span>TensorRT</span>
+										<span>Docker</span>
+										<span>Kubernetes</span>
+									</p>
+									<div class="description">
+										<p>Led the development of an enterprise-grade chatbot with focus on security and performance:</p>
+										<ul>
+											<li>Deployed a secure on-premises chatbot leveraging Generative AI</li>
+											<li>Designed and implemented a Retrieval-Augmented Generation (RAG) architecture using Milvus</li>
+											<li>Reduced response latency by 25-30% through optimized data pipeline design</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="experience-item">
+									<h3>Unleashed Brands - Phase II (Contract)</h3>
+									<h4>Software Engineer | 2023</h4>
+									<p class="technologies">
+										<span>FastAPI</span>
+										<span>Redis</span>
+										<span>JWT</span>
+										<span>PostgreSQL</span>
+									</p>
+									<div class="description">
+										<p>Developed a secure document management system with advanced security features:</p>
+										<ul>
+											<li>Implemented custom Role-Based Access Control (RBAC) with JWT authentication</li>
+											<li>Integrated row-level security and automated document workflows</li>
+											<li>Reduced manual processing time by 20 hours per week</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="experience-item">
+									<h3>New York University Tandon School of Engineering</h3>
+									<h4>Research Intern - Mechatronics, Control and Robotics Lab | Feb 2020 - May 2020</h4>
+									<p class="technologies">
+										<span>Embedded Systems</span>
+										<span>C++</span>
+										<span>Python</span>
+										<span>SolidWorks</span>
+										<span>Arduino</span>
+									</p>
+									<div class="description">
+										<p>Research Intern under Dr. Vikram Kapila:</p>
+										<ul>
+											<li>Designed and fabricated a rehabilitation device for stroke patients</li>
+											<li>Developed embedded software using C++ & Python</li>
+											<li>Implemented real-time sensor data processing and motor control systems</li>
+											<li>Created modular software components, reducing development time by 40%</li>
+											<li>Designed an automated testing framework for device calibration</li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- <div class="experience-item">
+									<h3>L.G. Balakrishnan & Bros Ltd</h3>
+									<h4>Intern | Dec 2017 - Apr 2018</h4>
+									<div class="description">
+										<p>Key achievements:</p>
+										<ul>
+											<li>Developed and deployed a custom data logging system to accurately track and analyze production output of individual machines</li>
+											<li>Leveraged expertise in cloud computing to design and implement a cloud-based database, streamlining inventory management and facilitating real-time production planning</li>
+										</ul>
+									</div>
+								</div> -->
 							</section>
 
 						<!-- Get Started -->
@@ -263,47 +318,47 @@
 									<p><table>
 										<thead>
 										  <tr>
-											<th>Programming Languages</th>
-                       						<th>Packages</th>
-                        					<th>Software</th>
-                        					<th>Hardware</th>
+											<th>Programming & Scripting</th>
+                       						<th>ML & AI</th>
+                        					<th>DevOps & Infrastructure</th>
+                        					<th>Databases</th>
 										  </tr>
 										</thead>
 										<tbody>
 										  <tr>
-											<td>C</td>
-											<td>OpenCV</td>
-											<td>Git</td>
-											<td>Arduino</td>
-										  </tr>
-										  <tr>
-											<td>C++</td>
-											<td>Keras</td>
-											<td>ROS</td>
-											<td>Raspberry Pi</td>
-										  </tr>
-										  <tr>
 											<td>Python</td>
+											<td>TensorFlow</td>
+											<td>Jenkins</td>
+											<td>Neo4j</td>
+										  </tr>
+										  <tr>
+											<td>C/C++</td>
 											<td>PyTorch</td>
-											<td>ROS2</td>
-											<td>Meta Quest 2</td>
+											<td>GitHub Actions</td>
+											<td>Chroma DB</td>
 										  </tr>
 										  <tr>
 											<td>C#</td>
-											<td>Tensorflow</td>
-											<td>Unity</td>
-											<td>Android</td>
+											<td>Llama-Index</td>
+											<td>AWS/Azure/GCP</td>
+											<td>Milvus</td>
 										  </tr>
 										  <tr>
-											<td>Kotlin</td>
-											<td>MySQL</td>
-											<td>SolidWorks</td>
-											<td>Siemens PLC</td>
+											<td>Java</td>
+											<td>Langchain</td>
+											<td>Docker</td>
+											<td>PostgreSQL</td>
 										  </tr>
 										  <tr>
 											<td></td>
-											<td>Tkinter</td>
-											<td>Android Studio</td>
+											<td>Keras</td>
+											<td>Kubernetes</td>
+											<td>Redis</td>
+										  </tr>
+										  <tr>
+											<td></td>
+											<td>TensorRT</td>
+											<td>Git</td>
 											<td></td>
 										  </tr>
 										</tbody>
@@ -333,23 +388,15 @@
 							<h2>Contact me</h2>
 							<dl class="alt">
 								<dt>Address</dt>
-								<!-- <dd>1234 Somewhere Road &bull;</dd> -->
-									<dd> Frisco, TX 75034 &bull; USA</dd>
-								<!-- <dt>Phone</dt> -->
-								<!-- <dd>(240) 733-6077</dd> -->
+								<dd>Frisco, TX 75034 &bull; USA</dd>
 								<dt>Email</dt>
-								<dd><a href="spraj@terpmail.umd.edu">spraj@terpmail.umd.edu</a></dd>
-
-								
-
+								<dd><a href="mailto:shaileshpranav.r@gmail.com">shaileshpranav.r@gmail.com</a></dd>
 							</dl>
-							<ul class="icons">
-								<!-- <li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li> -->
-								<!-- <li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li> -->
-								<!-- <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li> -->
-								<li><a href="https://github.com/shaileshpranav" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="https://www.linkedin.com/in/shailesh-pranav-r" class="icon brands fa-linkedin alt"><span class="label">Linkedin</span></a></li>
-							</ul>
+							<div class="social-links">
+								<a href="https://github.com/shaileshpranav" class="icon brands fa-github alt" title="GitHub"><span class="label">GitHub</span></a>
+								<a href="https://www.linkedin.com/in/shailesh-pranav-r" class="icon brands fa-linkedin alt" title="LinkedIn"><span class="label">LinkedIn</span></a>
+								<a href="https://shaileshpranav.github.io/" class="icon solid fa-globe alt" title="Portfolio"><span class="label">Portfolio</span></a>
+							</div>
 						</section>
 						<p class="copyright">&copy; Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>

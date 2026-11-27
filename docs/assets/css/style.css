@@ -1,7 +1,13 @@
 /* --- Global Styles & Variables --- */
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #823d89; 
+    --primary-color: #0056b3;   /* fills: white text on it is 7:1 */
+    --primary-hover: #004494;
+    --secondary-color: #823d89;
+    --link-color: #0056b3;      /* text/links: 7:1 on white */
+    --link-hover: #004494;
+    --accent-text: #823d89;     /* purple meta text: 7:1 on white */
+    --hero-end: #1f6bd1;        /* end of hero gradient: white text 5:1 */
+    --focus-ring: #0056b3;
     --background-color: #ffffff;
     --text-color: #333;
     --heading-color: #222;
@@ -54,15 +60,41 @@ p {
 }
 
 a {
-    color: var(--primary-color);
+    color: var(--link-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: darken(var(--primary-color), 10%);
+    color: var(--link-hover);
     text-decoration: underline;
 }
+
+/* Keyboard focus: visible on every interactive element */
+:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 3px;
+}
+.hero-section :focus-visible,
+.contact-section :focus-visible,
+#main-footer :focus-visible {
+    outline-color: #fff; /* ring must contrast with the coloured backgrounds */
+}
+
+/* Skip link: hidden until it receives keyboard focus */
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 2000;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 600;
+}
+.skip-link:hover { color: #fff; }
+.skip-link:focus { top: 0.75rem; }
 
 ul {
     list-style: none;
@@ -109,10 +141,10 @@ img {
     color: #fff;
 }
 .btn-primary:hover {
-    background-color: darken(var(--primary-color), 10%);
+    background-color: var(--primary-hover);
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 86, 179, 0.3);
     text-decoration: none;
 }
 
@@ -121,7 +153,7 @@ img {
     color: #fff;
 }
 .btn-secondary:hover {
-    background-color: darken(var(--secondary-color), 10%);
+    background-color: #6b3171;
      color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
@@ -130,8 +162,8 @@ img {
 
 .btn-outline {
     background-color: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: var(--link-color);
+    border: 2px solid var(--link-color);
 }
 .btn-outline:hover {
     background-color: var(--primary-color);
@@ -146,6 +178,15 @@ img {
 }
 .btn-sm i {
     margin-right: 0.3rem;
+}
+/* Phones and touch screens: small buttons grow to a 44px tap target */
+@media (max-width: 768px), (pointer: coarse) {
+    .btn-sm {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 /* --- Header & Navigation --- */
@@ -214,8 +255,8 @@ img {
 }
 
 #main-header .nav-links a:hover,
-#main-header .nav-links a.active { 
-    color: var(--primary-color);
+#main-header .nav-links a.active {
+    color: var(--link-color);
 }
 
 #main-header .nav-links a:hover::after,
@@ -226,6 +267,11 @@ img {
 
 #main-header .cv-button {
     margin-left: 2rem;
+}
+
+/* Resume link inside the mobile menu (the header CV button is hidden on phones) */
+#main-header .nav-links .nav-cv-mobile {
+    display: none;
 }
 
 /* Mobile Navigation */
@@ -248,26 +294,23 @@ img {
     text-align: center;
     min-height: auto; 
     padding: 6rem 1.5rem 6rem; /* Increased bottom padding */
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('images/hero-bg.jpg') center center/cover no-repeat; 
-    color: #fff; /* Assuming dark background or overlay */
+    background: linear-gradient(135deg, var(--primary-color), var(--hero-end));
+    color: #fff;
     position: relative;
-}
-
-.hero-section:not([style*="background-image"]) {
-    background: linear-gradient(135deg, var(--primary-color), #4e9eff); 
 }
 
 
 .hero-content h1 {
     color: #fff;
     margin-bottom: 0.5rem;
-    font-size: 3.5rem; 
+    font-size: 3.5rem;
 }
 
-.hero-content h2 {
+.hero-content .hero-tagline {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.8rem;
     font-weight: 400;
+    max-width: none;
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -320,10 +363,24 @@ img {
     opacity: 1; 
 }
 #about strong {
-    color: var(--primary-color);
+    color: var(--link-color);
 }
 
 /* --- Experience Section (Timeline) --- */
+.employer-header {
+    text-align: center;
+    margin-top: 2rem;
+}
+.employer-header h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1.5rem;
+    color: var(--link-color);
+}
+.employer-header span {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--accent-text);
+}
 .experience-timeline {
     position: relative;
     margin-top: 3rem;
@@ -346,7 +403,6 @@ img {
     margin-bottom: 3rem;
     width: 50%;
     padding: 10px 40px;
-    opacity: 0; 
 }
 .timeline-item:nth-child(odd) {
     left: 0;
@@ -414,13 +470,13 @@ img {
 .timeline-content h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
-    color: var(--primary-color);
+    color: var(--link-color);
 }
 .timeline-content .company {
     display: block;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--secondary-color);
+    color: var(--accent-text);
     font-size: 0.9rem;
 }
 .timeline-content ul {
@@ -432,6 +488,23 @@ img {
 .timeline-content ul li {
     margin-bottom: 0.4rem;
 }
+.timeline-content .role-focus {
+    display: block;
+    margin: -0.2rem 0 0.6rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+/* Earlier role (NYU), shown apart from the WorldLink timeline */
+.earlier-header {
+    margin-top: 1rem;
+}
+.earlier-role {
+    max-width: 700px;
+    margin: 1.5rem auto 0;
+    text-align: left;
+}
 
 /* Tech Tags */
 .tech-tags span, .project-card .tech-tags span {
@@ -440,12 +513,12 @@ img {
     color: var(--secondary-color);
     padding: 0.2rem 0.6rem;
     border-radius: 4px;
-    font-size: 0.75rem;
+    font-size: max(12px, 0.75rem); /* never below 12px, even when the root font shrinks on phones */
     margin: 0.2rem;
     font-weight: 500;
 }
 .tech-tags.small span {
-     font-size: 0.7rem;
+     font-size: max(12px, 0.75rem);
      padding: 0.15rem 0.5rem;
 }
 
@@ -465,7 +538,6 @@ img {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0; /* Start hidden for animation */
 }
 .project-card:hover {
     transform: translateY(-5px);
@@ -475,6 +547,22 @@ img {
 .project-card h3 {
     margin-top: 0;
     margin-bottom: 0.8rem;
+    font-size: 1.25rem;
+}
+.project-card p.project-meta {
+    flex-grow: 0;
+    margin: -0.5rem 0 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-text);
+}
+.project-group {
+    margin: 3rem 0 0;
+    font-size: 1.2rem;
+    color: var(--heading-color);
+}
+.project-group + .project-grid {
+    margin-top: 1.2rem;
 }
 .project-card p {
     flex-grow: 1; /* Make description take available space */
@@ -501,7 +589,6 @@ img {
 }
 
 .skill-category {
-    opacity: 0; /* Hidden for animation */
     padding: 1.5rem;
     background-color: #fff;
     border-radius: 8px;
@@ -509,7 +596,7 @@ img {
 }
 .skill-category h3 {
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--link-color);
     display: flex;
     align-items: center;
 }
@@ -530,7 +617,7 @@ img {
     content: '✓'; /* Checkmark or other icon */
     position: absolute;
     left: 0;
-    color: var(--primary-color);
+    color: var(--link-color);
     font-weight: 600;
 }
 
@@ -571,6 +658,18 @@ img {
 }
 .contact-info a:hover {
     text-decoration: underline;
+}
+
+.contact-section .contact-buttons {
+    margin-bottom: 2rem;
+}
+.contact-section .btn-outline {
+    color: #fff;
+    border-color: #fff;
+}
+.contact-section .btn-outline:hover {
+    background-color: #fff;
+    color: var(--primary-color);
 }
 
 .social-links a {
@@ -616,50 +715,41 @@ img {
     transition: background-color 0.3s ease;
 }
 .back-to-top:hover {
-    background-color: darken(var(--primary-color), 10%);
+    background-color: var(--primary-hover);
     color: #fff;
     text-decoration: none;
 }
 
 
 /* --- Animations --- */
+/* Content is visible by default. script.js adds .will-animate only to elements
+   below the fold (and only when reduced motion is off), then removes it as they
+   scroll into view, so nothing stays hidden if JS is slow or blocked. */
 .animate-on-scroll {
-    opacity: 1; /* Start visible */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.fade-in {
+.will-animate.fade-in {
     opacity: 0;
 }
-.fade-in.is-visible {
-    opacity: 1;
-}
 
-.fade-in-up {
+.will-animate.fade-in-up {
     opacity: 0;
     transform: translateY(40px);
 }
-.fade-in-up.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
-.fade-in-left {
+.will-animate.fade-in-left {
     opacity: 0;
     transform: translateX(-40px);
 }
-.fade-in-left.is-visible {
-    opacity: 1;
-    transform: translateX(0);
-}
 
-.fade-in-right {
+.will-animate.fade-in-right {
     opacity: 0;
     transform: translateX(40px);
 }
-.fade-in-right.is-visible {
-    opacity: 1;
-    transform: translateX(0);
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-on-scroll { transition: none; }
 }
 
 
@@ -674,7 +764,7 @@ img {
     h1 { font-size: 2.8rem; }
     h2 { font-size: 2rem; }
     .hero-content h1 { font-size: 3rem; }
-    .hero-content h2 { font-size: 1.5rem; }
+    .hero-content .hero-tagline { font-size: 1.5rem; }
 
      .project-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -684,10 +774,9 @@ img {
     }
 }
 
-@media (max-width: 768px) {
-    html { font-size: 15px; }
-
-    /* Mobile Navigation */
+/* Seven nav links plus CV button and theme toggle no longer fit below ~1100px,
+   so the hamburger menu takes over earlier than the phone breakpoint. */
+@media (max-width: 1100px) {
     #main-header .nav-links {
         display: none; /* Hide desktop links */
         flex-direction: column;
@@ -703,19 +792,36 @@ img {
     #main-header .nav-links.active {
         display: flex; /* Show when active */
     }
+    [data-theme="dark"] #main-header .nav-links {
+        background-color: var(--dark-card-bg); /* light text was sitting on a white menu */
+    }
     #main-header .nav-links li {
-        margin: 1rem 0;
+        margin: 0.4rem 0;
     }
-    #main-header .cv-button {
-        display: none; 
+    #main-header .nav-links a {
+        display: inline-block;
+        padding: 0.6rem 1rem; /* 44px-tall tap target */
     }
-     .mobile-nav-toggle {
+    .mobile-nav-toggle {
         display: block; /* Show hamburger */
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    html { font-size: 15px; }
+
+    #main-header .cv-button {
+        display: none;
+    }
+    #main-header .nav-links .nav-cv-mobile {
+        display: list-item;
     }
 
     .hero-section { padding-top: 100px;  }
     .hero-content h1 { font-size: 2.5rem; }
-    .hero-content h2 { font-size: 1.3rem; }
+    .hero-content .hero-tagline { font-size: 1.3rem; }
     .hero-buttons { display: flex; flex-direction: column; align-items: center; }
     .hero-buttons .btn { width: 80%; max-width: 250px; margin-bottom: 1rem; }
 
@@ -776,7 +882,7 @@ img {
 @media (max-width: 480px) {
     html { font-size: 14px; }
     .hero-content h1 { font-size: 2.2rem; }
-    .hero-content h2 { font-size: 1.1rem; }
+    .hero-content .hero-tagline { font-size: 1.1rem; }
     .btn { padding: 0.7rem 1.5rem; font-size: 0.9rem; }
 }
 
@@ -797,7 +903,7 @@ img {
 }
 
 .education-item h3 {
-    color: var(--primary-color);
+    color: var(--link-color);
     margin-bottom: 0.5rem;
 }
 
@@ -808,7 +914,7 @@ img {
 
 .education-item .year,
 .education-item .location {
-    color: var(--secondary-color);
+    color: var(--accent-text);
     font-size: 0.9rem;
 }
 
@@ -829,12 +935,12 @@ img {
 }
 
 .leadership-item h3 {
-    color: var(--primary-color);
+    color: var(--link-color);
     margin-bottom: 0.5rem;
 }
 
 .leadership-item .date {
-    color: var(--secondary-color);
+    color: var(--accent-text);
     font-size: 0.9rem;
     margin-bottom: 1rem;
 }
@@ -847,7 +953,13 @@ img {
     --light-bg-color: #1a1a1a;
     --border-color: var(--dark-border);
     --card-shadow: var(--dark-card-shadow);
-    --primary-color: var(--dark-primary); /* Use lighter blue in dark mode */
+    --primary-color: var(--dark-primary); /* fills: white text on it is 5.4:1 */
+    --primary-hover: #2d5a8f;
+    --link-color: #7db3ff;     /* 7.7:1 on dark cards */
+    --link-hover: #a8cdff;
+    --accent-text: #d9a8df;    /* 8.4:1 on dark cards */
+    --hero-end: #3b73b9;
+    --focus-ring: #7db3ff;
 }
 
 [data-theme="dark"] #main-header {
@@ -878,11 +990,13 @@ img {
     color: var(--text-color);
     cursor: pointer;
     font-size: 1.2rem;
+    min-width: 44px;
+    min-height: 44px;
     padding: 0.5rem;
     margin-left: 1rem;
     transition: color 0.3s ease;
 }
 
 .theme-toggle:hover {
-    color: var(--primary-color);
+    color: var(--link-color);
 }

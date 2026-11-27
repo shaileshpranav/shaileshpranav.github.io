@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileNavToggle && navLinks) {
         mobileNavToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            mobileNavToggle.setAttribute('aria-expanded', navLinks.classList.contains('active') ? 'true' : 'false');
             // Optional: Change hamburger icon to 'X'
             const icon = mobileNavToggle.querySelector('i');
             if (navLinks.classList.contains('active')) {
@@ -88,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 if (navLinks.classList.contains('active')) {
                     navLinks.classList.remove('active');
+                    mobileNavToggle.setAttribute('aria-expanded', 'false');
                      mobileNavToggle.querySelector('i').classList.remove('fa-times');
                      mobileNavToggle.querySelector('i').classList.add('fa-bars');
                 }
@@ -97,23 +99,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --- Intersection Observer for Scroll Animations ---
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    // Only hide elements that are off-screen at load; anything already in view
+    // stays put. Skipped entirely when the visitor prefers reduced motion.
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target); // Animate only once
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('will-animate');
+                    observer.unobserve(entry.target); // Animate only once
+                }
+            });
+        }, {
+            root: null, // relative to the viewport
+            threshold: 0.1 // trigger when 10% of the element is visible
+        });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const inView = rect.top < window.innerHeight && rect.bottom > 0;
+            if (!inView) {
+                element.classList.add('will-animate');
+                observer.observe(element);
             }
         });
-    }, {
-        root: null, // relative to the viewport
-        threshold: 0.1 // trigger when 10% of the element is visible
-    });
-
-    animatedElements.forEach(element => {
-        observer.observe(element);
-    });
+    }
 
     // --- Update Footer Year ---
     const currentYearSpan = document.getElementById('current-year');

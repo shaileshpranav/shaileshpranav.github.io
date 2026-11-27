@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shailesh Pranav - Software Engineer | Generative AI & ML</title>
+    <title>Shailesh Pranav - AI Engineer | LLM agents, RAG and production ML</title>
+    <meta name="description" content="AI engineer building LLM agents, RAG systems and ML pipelines that run in production. GenAI / ML Engineer at WorldLink US, Nov 2023 – Jul 2026; M.Eng. Robotics, UMD.">
+    <link rel="canonical" href="https://shailesh.app/">
+
+    <!-- Link previews (LinkedIn, Slack, X, iMessage) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shailesh.app/">
+    <meta property="og:title" content="Shailesh Pranav - AI Engineer | LLM agents, RAG and production ML">
+    <meta property="og:description" content="AI engineer building LLM agents, RAG systems and ML pipelines that run in production. GenAI / ML Engineer at WorldLink US, Nov 2023 – Jul 2026; M.Eng. Robotics, UMD.">
+    <meta property="og:image" content="https://shailesh.app/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Shailesh Pranav, AI Engineer - LLM agents, RAG and production ML">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <!-- Favicon: SVG for modern browsers, ICO/PNG fallbacks for the rest (?v bumps the browser cache) -->
+    <link rel="icon" href="favicon.ico?v=2" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=2">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -13,37 +31,41 @@
 </head>
 <body>
 
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <!-- Header & Navigation -->
     <header id="main-header">
         <nav>
             <div class="logo">
                 <a href="#hero">Shailesh Pranav</a>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="primary-nav">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li class="nav-cv-mobile"><a href="Shailesh_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)</a></li>
             </ul>
             <button class="theme-toggle" aria-label="Toggle dark mode">
                 <i class="fas fa-moon"></i>
             </button>
-            <a href="https://github.com/shaileshpranav/shaileshpranav.github.io/blob/main/Shailesh_Rajendran_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary cv-button">View CV</a>
-            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+            <a href="Shailesh_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary cv-button">View CV</a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
     </header>
 
-    <main>
+    <main id="main">
         <!-- Hero Section -->
         <section id="hero" class="hero-section full-height">
             <div class="hero-content animate-on-scroll fade-in">
                 <h1>Shailesh Pranav</h1>
-                <h2>Software Engineer | Generative AI & Enterprise ML Solutions</h2>
-                <p>Results-driven Software Engineer specializing in Generative AI and machine learning with a proven record of deploying enterprise-grade systems that reduce inference latency by 30%, improve throughput by 25%, and maintain 99.9% uptime.</p>
+                <p class="hero-tagline">AI Engineer | LLM agents, RAG and production ML</p>
+                <p>I build LLM agents, RAG systems and ML pipelines that run in production. At WorldLink US I cut LLM inference latency 30% with TensorRT and scaled a pricing pipeline from ~15 to ~65 models.</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-secondary">Explore My Work</a>
                     <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -59,7 +81,7 @@
             <div class="container">
                 <h2>About Me</h2>
                 <p>Welcome! I'm Shailesh, a Software Engineer deeply passionate about harnessing the power of <strong>Generative AI and Machine Learning</strong> to create impactful, enterprise-grade solutions.</p>
-                <p>Currently, as a <strong>Data/ML Engineer at WorldLink-US</strong>, I lead the design and deployment of real-time speech interaction systems and optimized LLM inferencing, supporting 30+ concurrent users and accelerating deployment cycles by 40%. My background includes a <strong>Master of Engineering in Robotics</strong> from the <strong>University of Maryland</strong>, providing a strong foundation in intelligent systems and robust engineering principles.</p>
+                <p>From Nov 2023 to Jul 2026 I worked at <strong>WorldLink US</strong> in Frisco, TX as a GenAI / ML Engineer, building multimodal RAG assistants, real-time speech (Whisper, MeloTTS) and optimised LLM serving, and working with client teams on a support assistant and ML pricing pipelines. My background includes a <strong>Master of Engineering in Robotics</strong> from the <strong>University of Maryland</strong>, providing a strong foundation in intelligent systems and robust engineering principles.</p>
                 <p>My focus is on building solutions that not only perform exceptionally well but also prioritize <strong>data privacy and security</strong>. From developing secure chatbots with role-based access control to architecting Retrieval-Augmented Generation (RAG) systems across audio, video, and text, I thrive on translating complex requirements into deployable, scalable applications.</p>
             </div>
         </section>
@@ -68,85 +90,81 @@
         <section id="experience" class="content-section bg-light">
             <div class="container">
                 <h2 class="animate-on-scroll fade-in">Professional Journey</h2>
+                <!-- Single employer header; the three roles below all sit under it -->
+                <div class="employer-header animate-on-scroll fade-in">
+                    <h3><a href="https://worldlink-us.com" target="_blank" rel="noopener noreferrer">WorldLink US</a></h3>
+                    <span>Frisco, TX | Nov 2023 – Jul 2026 | three roles</span>
+                </div>
                 <div class="experience-timeline">
-                    <!-- WorldLink -->
+                    <!-- WorldLink US: role 1 -->
                     <div class="timeline-item animate-on-scroll fade-in-left">
                         <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
                         <div class="timeline-content">
-                            <h3>Data/ML Engineer</h3>
-                            <span class="company"><a href="https://worldlink-us.com" target="_blank" rel="noopener noreferrer">WorldLink-US</a> | Nov 2023 - Present</span>
+                            <h3>GenAI / ML Engineer</h3>
+                            <span class="role-focus">LLM agents, voice AI and model serving</span>
+                            <span class="company">WorldLink US | Nov 2023 – Jul 2026</span>
                             <ul>
-                                <li>Spearheading advancements in real-time AI interactions and performance optimization.</li>
-                                <li>Engineered real-time STT/TTS using MeloTTS & Whisper.</li>
-                                <li>Developed a multimodal chatbot (audio, video, text) for RAG.</li>
-                                <li>Optimized LLM inference with TensorRT, reducing latency.</li>
-                                <li>Containerized applications with Docker & Kubernetes.</li>
+                                <li>Built a multimodal (voice, video, text) agentic RAG assistant in LangGraph and LangChain, with real-time speech through Whisper, MeloTTS and Azure TTS.</li>
+                                <li>Cut LLM inference latency 30% and raised throughput 25% with TensorRT.</li>
+                                <li>Kept LLM and speech services at 99.9% uptime on Docker and Kubernetes.</li>
+                                <li>Cut deployment time 40% with Jenkins and GitHub Actions CI/CD.</li>
+                                <li>Scoped each agent's tool access with role-based access control and per-tool permissions.</li>
                             </ul>
-                            <p class="tech-tags"><span>MeloTTS/AzureTTS</span> <span>Whisper</span> <span>TensorRT</span> <span>FastAPI</span> <span>Docker</span> <span>Kubernetes</span> <span>RAG</span></p>
+                            <p class="tech-tags"><span>LangGraph</span> <span>LangChain</span> <span>Whisper</span> <span>MeloTTS</span> <span>Azure TTS</span> <span>TensorRT</span> <span>FastAPI</span> <span>Docker</span> <span>Kubernetes</span> <span>RAG</span></p>
                         </div>
                     </div>
-                    <!-- Agricultural Equipment Manufacturer / WorldLink - ML Pipelines -->
+                    <!-- WorldLink US: role 2 (merged from the two 2023 contract entries) -->
                     <div class="timeline-item animate-on-scroll fade-in-right">
-                        <div class="timeline-icon"><i class="fas fa-tractor"></i></div>
-                        <div class="timeline-content">
-                            <h3>Data Engineer (Contract) – ML Pipelines</h3>
-                            <span class="company"><a href="https://worldlink-us.com" target="_blank" rel="noopener noreferrer">WorldLink US</a> / Global Agricultural Equipment Manufacturer | 2024 - Present</span>
-                            <!-- <p class="location">Frisco, TX</p> -->
-                            <ul>
-                                <li>Implemented production-grade data engineering solutions to improve ML training reliability and model performance.</li>
-                                <li>Outlier detection & data quality: implemented outlier detection and removal logic using <strong>PySpark</strong> across large-scale datasets, improving downstream model accuracy and reliability.</li>
-                                <li>Production-grade ML pipelines: built and hardened scalable data preprocessing pipelines in <strong>Databricks</strong>, streamlining the end-to-end ML training workflow and aligning outputs to model input requirements.</li>
-                                <li>Feature engineering & model improvement: analyzed data source characteristics and refined feature inputs to support iterative model improvements and tighter feedback loops between data engineering and data science teams.</li>
-                            </ul>
-                            <p class="tech-tags"><span>PySpark</span> <span>Databricks</span> <span>Data Quality</span> <span>ML Pipelines</span> <span>Feature Engineering</span></p>
-                        </div>
-                    </div>
-                    <!-- WorldLink US / Multi-brand Consumer Services Platform (Phase II) -->
-                    <div class="timeline-item animate-on-scroll fade-in-right">
-                         <div class="timeline-icon"><i class="fas fa-code"></i></div>
-                         <div class="timeline-content">
-                             <h3>Software Engineer (Contract)</h3>
-                             <span class="company">WorldLink US / Multi-brand Consumer Services Platform | 2023</span>
-                             <ul>
-                                <li>Developed a highly secure document management system.</li>
-                                <li>Implemented custom RBAC with JWT authentication.</li>
-                                <li>Integrated row-level security in PostgreSQL.</li>
-                                <li>Automated workflows, saving 20+ hours/week manually.</li>
-                            </ul>
-                             <p class="tech-tags"><span>FastAPI</span> <span>Redis</span> <span>JWT</span> <span>PostgreSQL</span> <span>RBAC</span></p>
-                         </div>
-                    </div>
-                    <!-- WorldLink US / Multi-brand Consumer Services Platform (Phase I) -->
-                    <div class="timeline-item animate-on-scroll fade-in-left">
                         <div class="timeline-icon"><i class="fas fa-code"></i></div>
                         <div class="timeline-content">
-                            <h3>Software Engineer (Contract)</h3>
-                            <span class="company">WorldLink US / Multi-brand Consumer Services Platform | 2023</span>
+                            <h3>GenAI Software Engineer</h3>
+                            <span class="role-focus">AI support assistant</span>
+                            <span class="company">WorldLink US | client: multi-brand consumer services platform | Mar 2024 – Dec 2024</span>
                             <ul>
-                                <li>Led development of a secure, high-performance enterprise chatbot.</li>
-                                <li>Deployed secure on-premises Generative AI chatbot.</li>
-                                <li>Designed RAG architecture using Milvus vector DB.</li>
-                                <li>Reduced response latency by 25-30% via pipeline optimization.</li>
+                                <li>Cut support tickets 25–30% with an on-prem RAG chatbot on Milvus serving 1,000+ queries a day.</li>
+                                <li>Secured 100,000+ documents behind a FastAPI backend with RBAC, JWT and PostgreSQL row-level security.</li>
+                                <li>Saved 20+ hours of manual work a week by automating document workflows; tuned chunking and embeddings.</li>
+                                <li>Deployed on the client's own servers as part of a WorldLink team working with the client's engineers.</li>
                             </ul>
-                            <p class="tech-tags"><span>FastAPI</span> <span>PostgreSQL</span> <span>Redis</span> <span>Milvus</span> <span>TensorRT</span> <span>Docker</span> <span>Kubernetes</span> <span>GenAI</span> <span>RAG</span></p>
+                            <p class="tech-tags"><span>FastAPI</span> <span>PostgreSQL</span> <span>Redis</span> <span>Milvus</span> <span>JWT</span> <span>RBAC</span> <span>Docker</span> <span>RAG</span></p>
                         </div>
                     </div>
-                    <!-- NYU -->
-                    <div class="timeline-item animate-on-scroll fade-in-right">
-                        <div class="timeline-icon"><i class="fas fa-flask"></i></div>
+                    <!-- WorldLink US: role 3 -->
+                    <div class="timeline-item animate-on-scroll fade-in-left">
+                        <div class="timeline-icon"><i class="fas fa-tractor"></i></div>
                         <div class="timeline-content">
-                            <h3>Research Intern</h3>
-                            <span class="company">NYU Tandon School of Engineering | Feb 2020 - May 2020</span>
+                            <h3>Data Engineer</h3>
+                            <span class="role-focus">ML pricing pipelines</span>
+                            <span class="company">WorldLink US | client: global agricultural equipment manufacturer | Mar 2025 – Jul 2026</span>
                             <ul>
-                                <li>Contributed to assistive technology research in the Mechatronics, Control and Robotics Lab.</li>
-                                <li>Designed & fabricated a robotic rehabilitation device.</li>
-                                <li>Developed embedded C++ & Python control software.</li>
-                                <li>Implemented real-time sensor processing & motor control.</li>
-                                <li>Created modular software components (40% dev time reduction).</li>
-                                <li>Built an automated testing framework for calibration.</li>
+                                <li>Scaled price-prediction pipelines from ~15 to ~65 regression models with weekly batch inference, drift detection, and promotion only when a challenger beat the incumbent's MAPE.</li>
+                                <li>Helped the client save at least $2M in a fiscal year (client-verified) with PySpark outlier and data-quality checks and Databricks preprocessing.</li>
+                                <li>Chose quadratic regression over boosted trees so pricing stayed explainable, after benchmarking Ray Tune against Optuna on 3 models.</li>
+                                <li>Unified six segment models behind one FastAPI router over Databricks serving endpoints (MVP).</li>
+                                <li>Worked with the client's data scientists to refine feature inputs.</li>
                             </ul>
-                            <p class="tech-tags"><span>Embedded Systems</span> <span>C++</span> <span>Python</span> <span>SolidWorks</span> <span>Arduino</span> <span>Robotics</span></p>
+                            <p class="tech-tags"><span>PySpark</span> <span>Databricks</span> <span>MLOps</span> <span>Drift Detection</span> <span>FastAPI</span></p>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Earlier role, kept apart from the WorldLink timeline -->
+                <div class="employer-header earlier-header animate-on-scroll fade-in">
+                    <h3>NYU Tandon School of Engineering</h3>
+                    <span>Earlier role | Feb 2020 – May 2020</span>
+                </div>
+                <div class="earlier-role animate-on-scroll fade-in-up">
+                    <div class="timeline-content">
+                        <h3>Research Intern</h3>
+                        <ul>
+                            <li>Contributed to assistive technology research in the Mechatronics, Control and Robotics Lab.</li>
+                            <li>Designed & fabricated a robotic rehabilitation device.</li>
+                            <li>Developed embedded C++ & Python control software.</li>
+                            <li>Implemented real-time sensor processing & motor control.</li>
+                            <li>Created modular software components (40% dev time reduction).</li>
+                            <li>Built an automated testing framework for calibration.</li>
+                        </ul>
+                        <p class="tech-tags"><span>Embedded Systems</span> <span>C++</span> <span>Python</span> <span>SolidWorks</span> <span>Arduino</span> <span>Robotics</span></p>
                     </div>
                 </div>
             </div>
@@ -156,29 +174,60 @@
         <section id="projects" class="content-section">
             <div class="container">
                  <h2 class="animate-on-scroll fade-in">Featured Projects</h2>
+                <h3 class="project-group">AI &amp; LLM</h3>
                 <div class="project-grid">
-                    <!-- Project Card 1 -->
                     <div class="project-card animate-on-scroll fade-in-up">
-                        <h3>Enterprise AI Chatbot</h3>
-                        <p>Built a retrieval-augmented chatbot with Mixtral/Llama 3, Neo4j and Milvus to support scalable enterprise AI workflows and reduce response time for data-driven user inquiries.</p>
-                        <p class="tech-tags small"><span>GenAI</span><span>Langchain</span><span>Neo4j</span><span>Milvus</span><span>Streamlit</span></p>
+                        <h3>Job Tracker</h3>
+                        <p class="project-meta">2026</p>
+                        <p>LLM app that extracts job postings, tailors resumes and drafts application answers. It routes each task to Anthropic, OpenRouter or local Ollama models, with JSON-schema output.</p>
+                        <p class="tech-tags small"><span>TypeScript</span><span>Node</span><span>SQLite</span><span>Anthropic</span><span>OpenRouter</span><span>Ollama</span></p>
                         <div class="project-links">
-                            <!-- <a href="#" class="btn btn-sm btn-outline">Details</a> Add link if available -->
+                            <a href="https://github.com/shaileshpranav/Job-Tracker" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
-                    <!-- Project Card 2 -->
-                     <div class="project-card animate-on-scroll fade-in-up" style="animation-delay: 0.1s;">
-                        <h3>Human Avoidance Robot Module</h3>
-                        <p>Developed a vision-based human detection module that reliably tracks people and transforms coordinates for safer robot navigation in dynamic environments.</p>
-                         <p class="tech-tags small"><span>Computer Vision</span><span>Python</span><span>Robotics</span></p>
+                    <div class="project-card animate-on-scroll fade-in-up">
+                        <h3>Daydream</h3>
+                        <p class="project-meta">2026</p>
+                        <p>Native macOS app that runs text-to-image models on-device through Core ML and MLX, with a job queue, LoRAs, image-to-image and a local-LLM prompt enhancer.</p>
+                        <p class="tech-tags small"><span>Swift</span><span>Core ML</span><span>MLX</span><span>macOS</span></p>
+                        <div class="project-links">
+                            <a href="https://github.com/shaileshpranav/Daydream" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                    <div class="project-card animate-on-scroll fade-in-up">
+                        <h3>Knowledge-graph RAG chatbot</h3>
+                        <p class="project-meta">Personal project</p>
+                        <p>Built a retrieval-augmented chatbot with Mixtral/Llama 3, Neo4j and Milvus that answers data-driven user questions.</p>
+                        <p class="tech-tags small"><span>GenAI</span><span>Langchain</span><span>Neo4j</span><span>Milvus</span><span>Streamlit</span></p>
+                        <div class="project-links">
+
+                        </div>
+                    </div>
+                </div>
+                <h3 class="project-group">Robotics, vision &amp; other</h3>
+                <div class="project-grid">
+                    <div class="project-card animate-on-scroll fade-in-up">
+                        <h3>Wall-E cleaning robot</h3>
+                        <p class="project-meta">UMD · 2022</p>
+                        <p>C++ ROS2 robot in Gazebo that maps an unknown building with SLAM, then visits each room to detect and pick up trash. Built test-first in a team of 3, with CI.</p>
+                        <p class="tech-tags small"><span>C++</span><span>ROS2</span><span>Gazebo</span><span>SLAM</span></p>
+                        <div class="project-links">
+                            <a href="https://github.com/shaileshpranav/Wall-E" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                    <div class="project-card animate-on-scroll fade-in-up">
+                        <h3>Human detection and tracking</h3>
+                        <p class="project-meta">UMD · 2022</p>
+                        <p>C++ module using YOLO and DeepSORT that tracks people in video and reports their (x, y, z) position in the robot's frame.</p>
+                        <p class="tech-tags small"><span>Computer Vision</span><span>C++</span><span>YOLO</span><span>DeepSORT</span><span>Robotics</span></p>
                         <div class="project-links">
                             <a href="https://github.com/shaileshpranav/Human_avoidance" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Code</a>
                             <a href="https://github.com/shaileshpranav/Human_avoidance/blob/main/output/Result.gif" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fas fa-image"></i> Result</a>
                         </div>
                     </div>
-                     <!-- Project Card 3 -->
-                    <div class="project-card animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="project-card animate-on-scroll fade-in-up">
                         <h3>Self-Driving Trajectory Generation</h3>
+                        <p class="project-meta">UMD · 2022</p>
                         <p>Implemented a Vision Transformer-based planner for dynamic driving scenarios, improving trajectory prediction accuracy using the Lyft Level5 dataset.</p>
                         <p class="tech-tags small"><span>Vision Transformer</span><span>PyTorch</span><span>Simulation</span><span>Python</span></p>
                         <div class="project-links">
@@ -186,26 +235,25 @@
                             <a href="https://youtu.be/pSfD7ANvFa8" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fas fa-video"></i> Demo</a>
                         </div>
                     </div>
-                     <!-- Project Card 4 -->
-                    <div class="project-card animate-on-scroll fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="project-card animate-on-scroll fade-in-up">
                         <h3>Urban Search & Rescue Sim</h3>
+                        <p class="project-meta">UMD · 2021</p>
                         <p>Designed a two-robot simulation to map victim locations and coordinate rescue actions, demonstrating effective multi-agent search and path planning in emergency scenarios.</p>
                         <p class="tech-tags small"><span>Robotics Sim</span><span>Path Planning</span><span>Multi-agent</span></p>
                         <div class="project-links">
                             <a href="https://github.com/shaileshpranav/US-R-challenge.git" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
-                     <!-- Project Card 5 -->
-                    <div class="project-card animate-on-scroll fade-in-up" style="animation-delay: 0.0s;">
+                    <div class="project-card animate-on-scroll fade-in-up">
                         <h3>DFS Maze Solver Robot</h3>
+                        <p class="project-meta">UMD · 2021</p>
                         <p>Created an autonomous maze-solving robot using Depth First Search, demonstrating reliable path planning and navigation in a micro mouse simulation.</p>
                         <p class="tech-tags small"><span>Algorithms</span><span>DFS</span><span>C++</span><span>Simulation</span></p>
                         <div class="project-links">
                             <a href="https://github.com/shaileshpranav/MazeSolver-using-DFS.git" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
-                    <!-- Project Card 6 -->
-                     <div class="project-card animate-on-scroll fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="project-card animate-on-scroll fade-in-up">
                         <h3>Immersive VR Escape Room</h3>
                         <p>Delivered an interactive Unity VR experience with hand tracking and multi-level puzzles, designed to improve engagement through polished 3D interaction and immersive storytelling.</p>
                         <p class="tech-tags small"><span>Unity</span><span>C#</span><span>VR</span><span>3D Modeling</span></p>
@@ -214,8 +262,6 @@
                             <a href="https://www.youtube.com/watch?v=1QTgZwuJqas&list=PL3ptHxXio6-gHdQEtkB0kHGlhEDvtEWqf&pp=gAQBiAQB" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fas fa-video"></i> Demo</a>
                         </div>
                     </div>
-                    <!-- Add other projects similarly -->
-
                 </div>
             </div>
         </section>
@@ -232,16 +278,21 @@
                             <li>C/C++</li>
                             <li>C#</li>
                             <li>Java</li>
+                            <li>TypeScript</li>
+                            <li>Swift</li>
                         </ul>
                     </div>
                     <div class="skill-category animate-on-scroll fade-in-up" style="animation-delay: 0.1s;">
                         <h3><i class="fas fa-brain"></i> AI / Machine Learning</h3>
                         <ul>
                             <li>TensorFlow, PyTorch, Keras</li>
-                            <li>Langchain, Llama-Index</li>
+                            <li>Langchain, LangGraph, Llama-Index</li>
+                            <li>MCP</li>
+                            <li>OpenAI / Anthropic / OpenRouter APIs, Ollama</li>
                             <li>TensorRT Optimization</li>
                             <li>Generative AI (LLMs, RAG)</li>
                             <li>Computer Vision, NLP</li>
+                            <li>YOLO, DeepSORT</li>
                         </ul>
                     </div>
                     <div class="skill-category animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
@@ -249,7 +300,8 @@
                          <ul>
                             <li>PostgreSQL, Redis</li>
                             <li>Neo4j (Graph DB)</li>
-                            <li>Milvus, Chroma DB (Vector)</li>
+                            <li>Milvus, Qdrant, Chroma DB (Vector)</li>
+                            <li>Databricks, PySpark</li>
                         </ul>
                     </div>
                      <div class="skill-category animate-on-scroll fade-in-up" style="animation-delay: 0.3s;">
@@ -265,6 +317,7 @@
                         <h3><i class="fas fa-cogs"></i> Other</h3>
                         <ul>
                             <li>Robotics (Simulation, Control)</li>
+                            <li>ROS2, Gazebo, SLAM</li>
                             <li>Embedded Systems</li>
                             <li>Unity (VR/AR Dev)</li>
                             <li>Agile Methodologies</li>
@@ -283,13 +336,11 @@
                         <h3>University of Maryland</h3>
                         <p class="degree">Master of Engineering: Robotics Engineering</p>
                         <p class="year">May 2023</p>
-                        <p class="location">College Park, MD, USA</p>
                     </div>
                     <div class="education-item animate-on-scroll fade-in-up">
                         <h3>PSG College of Technology</h3>
                         <p class="degree">Bachelor of Engineering: Robotics and Automation Engineering</p>
                         <p class="year">May 2020</p>
-                        <p class="location">Coimbatore, TN, India</p>
                     </div>
                 </div>
             </div>
@@ -320,14 +371,13 @@
                 <h2>Let's Connect!</h2>
                 <p>Interested in collaborating or discussing opportunities in AI, ML, or Software Engineering? I'd love to hear from you.</p>
                 <div class="contact-info">
-                    <p><i class="fas fa-map-marker-alt"></i> Frisco, TX</p>
-                    <p><i class="fas fa-phone"></i> +1 240-733-6077</p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:shaileshpranav.r@gmail.com">shaileshpranav.r@gmail.com</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:shaileshpranav.r@gmail.com">shaileshpranav.r@gmail.com</a></p>                </div>
+                <div class="contact-buttons">
+                    <a href="Shailesh_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Download CV</a>
                 </div>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/shailesh-pranav-r" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/shaileshpranav" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
-                    <a href="https://shaileshpranav.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Portfolio Website"><i class="fas fa-briefcase"></i></a>
                 </div>
             </div>
         </section>
